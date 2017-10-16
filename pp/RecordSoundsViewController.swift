@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecordSoundsViewController.swift
 //  pp
 //
 //  Created by Maurizio Pietrantuono on 16/10/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RecordSoundsViewController: UIViewController {
     
     @IBOutlet weak var recordingLabel: UILabel!
     
