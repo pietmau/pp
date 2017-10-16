@@ -25,7 +25,6 @@
                                 <state key="normal" image="Record"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Gn-Xr-nT7"/>
-                                    <segue destination="8ZB-Mj-Gf0" kind="show" id="Cp6-sb-rla"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfs-uh-Zxd">
@@ -61,16 +60,17 @@
                         <outlet property="recordButton" destination="Jkz-gQ-jcV" id="K4C-sI-ewX"/>
                         <outlet property="recordingLabel" destination="Qkz-wg-PSh" id="vNo-kZ-3oR"/>
                         <outlet property="stopRecording" destination="dfs-uh-Zxd" id="TEU-lg-Jfj"/>
+                        <segue destination="8ZB-Mj-Gf0" kind="show" identifier="stopRecording" id="QXO-bU-IJw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="906" y="117"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sound View Controller-->
         <scene sceneID="yOG-gV-Y1b">
             <objects>
-                <viewController id="8ZB-Mj-Gf0" sceneMemberID="viewController">
+                <viewController id="8ZB-Mj-Gf0" customClass="PlaySoundViewController" customModule="pp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zuo-3E-DSh"/>
                         <viewControllerLayoutGuide type="bottom" id="JMX-aa-RCl"/>
