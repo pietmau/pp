@@ -85,13 +85,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ogt-T0-Mdg">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="166.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hq1-2e-Ya4" userLabel="slow">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hq1-2e-Ya4" userLabel="slow">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="166.5"/>
                                                 <state key="normal" image="Slow"/>
+                                                <connections>
+                                                    <action selector="play:" destination="8ZB-Mj-Gf0" eventType="touchUpInside" id="CpJ-aQ-Q9N"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyk-va-th2" userLabel="fast">
                                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="166.5"/>
                                                 <state key="normal" image="Fast"/>
+                                                <connections>
+                                                    <action selector="play:" destination="8ZB-Mj-Gf0" eventType="touchUpInside" id="efg-jV-0UR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -101,10 +107,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqV-WH-dpA" userLabel="high">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="166"/>
                                                 <state key="normal" image="HighPitch"/>
+                                                <connections>
+                                                    <action selector="play:" destination="8ZB-Mj-Gf0" eventType="touchUpInside" id="W1c-BO-ACa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDY-XM-bUH" userLabel="low">
                                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="166"/>
                                                 <state key="normal" image="LowPitch"/>
+                                                <connections>
+                                                    <action selector="play:" destination="8ZB-Mj-Gf0" eventType="touchUpInside" id="eUo-jc-ibY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -114,10 +126,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCo-Ka-Eq8" userLabel="echo">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="166.5"/>
                                                 <state key="normal" image="Echo"/>
+                                                <connections>
+                                                    <action selector="play:" destination="8ZB-Mj-Gf0" eventType="touchUpInside" id="kw4-T4-hJt"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcp-hc-evS" userLabel="reverb">
                                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="166.5"/>
                                                 <state key="normal" image="Reverb"/>
+                                                <connections>
+                                                    <action selector="play:" destination="8ZB-Mj-Gf0" eventType="touchUpInside" id="387-4V-MlZ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -133,6 +151,9 @@
                                     <constraint firstAttribute="height" constant="64" id="Qq2-gG-Cbi"/>
                                 </constraints>
                                 <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="8ZB-Mj-Gf0" eventType="touchUpInside" id="Z7p-uX-xW6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -144,6 +165,15 @@
                             <constraint firstItem="t2Y-PR-TbE" firstAttribute="top" secondItem="D5P-mR-VPD" secondAttribute="bottom" constant="20" id="zep-I4-eW9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="echo" destination="TCo-Ka-Eq8" id="3Ew-53-vtm"/>
+                        <outlet property="fast" destination="Fyk-va-th2" id="gjd-MQ-2Vp"/>
+                        <outlet property="high" destination="VqV-WH-dpA" id="Sc3-S7-PKv"/>
+                        <outlet property="low" destination="xDY-XM-bUH" id="kSL-vR-rLs"/>
+                        <outlet property="reverb" destination="Wcp-hc-evS" id="je2-xc-BZI"/>
+                        <outlet property="slow" destination="Hq1-2e-Ya4" id="zta-Hw-Sn5"/>
+                        <outlet property="stop" destination="t2Y-PR-TbE" id="tq5-TP-s1Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSY-HM-zcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
