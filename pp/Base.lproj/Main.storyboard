@@ -156,6 +156,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JMX-aa-RCl" firstAttribute="top" secondItem="t2Y-PR-TbE" secondAttribute="bottom" constant="20" id="7LW-ZG-gkJ"/>
                             <constraint firstAttribute="trailing" secondItem="D5P-mR-VPD" secondAttribute="trailing" id="QEu-gc-ghI"/>

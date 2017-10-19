@@ -7,35 +7,38 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlaySoundViewController: UIViewController {
     var url:URL!
-    
     @IBOutlet weak var slow: UIButton!
-    
     @IBOutlet weak var fast: UIButton!
-    
     @IBOutlet weak var high: UIButton!
-    
     @IBOutlet weak var low: UIButton!
-    
     @IBOutlet weak var echo: UIButton!
-    
     @IBOutlet weak var reverb: UIButton!
-    
     @IBOutlet weak var stop: UIButton!
+    
+    var recordedAudioURL:URL!
+    var audioFile:AVAudioFile!
+    var audioEngine:AVAudioEngine!
+    var audioPlayerNode: AVAudioPlayerNode!
+    var stopTimer: Timer!
+    
+    enum ButtonType: Int {
+        case slow = 0, fast, chipmunk, vader, echo, reverb
+    }
     
     @IBAction func play(_ sender: UIButton){
         print("play")
     }
-
+    
     @IBAction func stop(_ sender: UIButton){
         print("stop")
     }
-
-    
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         slow.contentMode = .center
         slow.imageView?.contentMode = .scaleAspectFit
         fast.contentMode = .center
@@ -48,8 +51,12 @@ class PlaySoundViewController: UIViewController {
         echo.imageView?.contentMode = .scaleAspectFit
         reverb.contentMode = .center
         reverb.imageView?.contentMode = .scaleAspectFit
-
-        
+        configureUI(.notPlaying)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupAudio()
     }
     
 }
