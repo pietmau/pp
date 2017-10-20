@@ -35,7 +35,6 @@ extension PlaySoundViewController: AVAudioPlayerDelegate {
     
     func setupAudio() {
         // initialize (recording) audio file
-        if(recordedAudioURL==nil){return}
         do {
             audioFile = try AVAudioFile(forReading: recordedAudioURL as URL)
         } catch {
